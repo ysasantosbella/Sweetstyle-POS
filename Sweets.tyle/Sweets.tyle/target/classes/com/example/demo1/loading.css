@@ -1,0 +1,30 @@
+/* Set the background color for the entire loading screen */
+.loading-screen {
+    -fx-alignment: center;
+    -fx-padding: 50px;
+    -fx-background-color: #eec5de; /* Light pink background */
+}
+
+/* ProgressBar styling */
+.progress-bar {
+    -fx-accent: black; /* Set the color of the progress bar */
+    -fx-pref-width: 200px;
+}
+
+/* Title Label styling */
+.title-label {
+    -fx-font-size: 30px; /* Larger text */
+    -fx-font-weight: bold;
+    -fx-text-fill: #140F13; /* Dark color for the text */
+    -fx-font-family: "Arial", sans-serif; /* Clean modern font */
+}
+
+/* Add a background color to the logo */
+.image-view {
+    -fx-background-color: #fff; /* White background */
+    -fx-padding: 15px; /* Padding around the logo */
+    -fx-border-radius: 50%; /* Circular border */
+    -fx-border-color: #140F13; /* Dark border color */
+    -fx-border-width: 3px; /* Border width */
+    fx-background-radius: 10;
+}

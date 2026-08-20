@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap');
+
+.root{
+    -fx-font-family: "Gothic A1";
+    -fx-background-color: #eec5de;
+}
+
+#txtUsername, #txtPassword{
+    -fx-font-weight: 500;
+    -fx-font-size: 15px;
+    -fx-background-color: #140F13;
+    -fx-text-fill: #eec5de;
+    -fx-prompt-text-fill: #b59cad;
+    -fx-background-radius: 40px;
+    -fx-padding: 10px 20px;
+    -fx-effect: dropshadow(gaussian, #545454, 10, 0, 0, 3);
+}
+
+#loginButton{
+    -fx-font-weight: 700;
+    -fx-font-size: 13px;
+    -fx-background-color: #140F13;
+    -fx-text-fill: #eec5de;
+    -fx-prompt-text-fill: #b59cad;
+    -fx-background-radius: 40px;
+}
+
+#shopLabel{
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+}

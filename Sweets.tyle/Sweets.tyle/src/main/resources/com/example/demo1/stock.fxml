@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="232.0" prefWidth="359.0" style="-fx-background-color: #eec5de;" stylesheets="@editproduct.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.UpdateStockController">
+    <VBox alignment="CENTER" layoutX="30.0" layoutY="16.0" prefHeight="200" prefWidth="300" spacing="10">
+
+        <!-- Title -->
+        <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Update Stock" />
+
+        <!-- Product ID (Hidden, but stored for reference) -->
+        <Label fx:id="productIDLabel" text="Product ID: " />
+
+        <!-- Current Stock Display -->
+        <HBox spacing="5">
+            <Label text="Current Stock:" />
+            <Label fx:id="currentStockLabel" style="-fx-font-weight: bold;" text="0" />
+        </HBox>
+
+        <!-- New Stock Input -->
+        <HBox spacing="5">
+            <Label text="New Stock:" />
+            <TextField fx:id="newStockField" promptText="Enter new stock" />
+        </HBox>
+
+        <!-- Buttons -->
+        <HBox alignment="CENTER" spacing="10">
+            <Button fx:id="updateButton" onAction="#handleSave" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Update" />
+            <Button fx:id="cancelButton" onAction="#handleCancel" style="-fx-background-color: #FF5733; -fx-text-fill: white;" text="Cancel" />
+        </HBox>
+    </VBox>
+</AnchorPane>

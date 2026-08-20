@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15" style="-fx-background-color: #eec5de;" stylesheets="@loading.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.LoadingController">
+    <!-- Logo Image -->
+    <ImageView fx:id="logoImage" fitHeight="120" fitWidth="120" styleClass="image-view">
+        <image>
+            <Image url="@../../../assets/sweetstyle_logo.png" />
+        </image>
+    </ImageView>
+
+    <!-- Title Label -->
+    <Label fx:id="titleLabel" styleClass="title-label" text="Sweets.tyle Café" />
+
+    <!-- ProgressBar for loading -->
+    <ProgressBar fx:id="progressBar" maxWidth="200" progress="0" />
+</VBox>

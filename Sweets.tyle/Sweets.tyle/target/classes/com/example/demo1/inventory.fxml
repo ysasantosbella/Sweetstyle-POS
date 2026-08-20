@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane fx:id="inventoryAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="834.0" prefWidth="1295.0" snapToPixel="false" style="-fx-background-color: #fdd0e9;" stylesheets="@Inventory.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.BaseInventoryController">
+   <children>
+      <ImageView fitHeight="754.0" fitWidth="1302.0" layoutY="68.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="68.0">
+         <image>
+            <Image url="@../../../assets/BackgroundIcons.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="67.0" stroke="WHITE" strokeType="INSIDE" width="1295.0" AnchorPane.bottomAnchor="767.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <Label alignment="CENTER" layoutX="150.0" layoutY="84.0" prefHeight="80.0" prefWidth="160.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="INVENTORY" />
+      <ImageView fitHeight="449.0" fitWidth="1324.0" layoutX="-25.0" layoutY="-204.0" pickOnBounds="true" AnchorPane.bottomAnchor="589.0" AnchorPane.leftAnchor="-25.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="-204.0">
+         <image>
+            <Image url="@../../../assets/Banner.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="53.0" fitWidth="113.0" layoutX="-9.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="771.3333333333334" AnchorPane.leftAnchor="-9.0" AnchorPane.rightAnchor="1277.6666666666667" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../../../assets/Logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="79.33333333333333" layoutY="18.0" prefHeight="39.0" prefWidth="94.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Welcome," />
+      <Label fx:id="roleLabel" layoutX="167.0" layoutY="21.0" prefHeight="33.0" prefWidth="195.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="User" />
+      <Button fx:id="logoutButton" layoutX="1023.0" layoutY="14.0" onAction="#handleLogout" prefHeight="30.0" prefWidth="119.0" text="Logout" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="767.0" layoutX="-4.0" layoutY="66.0" stroke="WHITE" strokeType="INSIDE" width="79.0" />
+      <!-- Collapsible Navigation Pane -->
+      <VBox fx:id="navigationPane" layoutY="68.0" prefHeight="767.0" prefWidth="150.0" spacing="15.0" style="-fx-background-color: #ffffff; -fx-padding: 20px; -fx-border-color: #ddd; -fx-border-width: 0 1 0 0;" AnchorPane.bottomAnchor="-1.0" AnchorPane.topAnchor="68.0">
+         <children>
+            <HBox prefHeight="46.0" prefWidth="109.0" />
+            <Button fx:id="inventoryButton" onAction="#goToInventory" prefWidth="110.0" style="-fx-background-color: #eec5de;" stylesheets="@Inventory.css" text="Inventory" />
+            <Button fx:id="sellingButton" onAction="#goToSelling" prefWidth="110.0" style="-fx-background-color: #eec5de;" text="Selling" />
+         </children>
+      </VBox>
+      <!-- Toggle Button (Hamburger icon) -->
+      <Button fx:id="menuToggleButton" layoutX="10.0" layoutY="84.0" onAction="#toggleSidebar" text="☰" />
+
+      <TabPane fx:id="tabPane" layoutX="174.0" layoutY="169.0" AnchorPane.bottomAnchor="145.0" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="344.0" AnchorPane.topAnchor="169.0">
+         <tabs>
+            <Tab fx:id="pastriesTab" text="Pastries">
+               <content>
+                  <ScrollPane fx:id="PastriesScrollPane" hbarPolicy="NEVER" prefHeight="520.0" prefWidth="843.0" vbarPolicy="ALWAYS">
+                     <content>
+                        <GridPane fx:id="pastriesGrid" hgap="10" prefHeight="4.0" prefWidth="5.0" vgap="10" />
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+            <Tab fx:id="drinksTab" text="Drinks">
+               <content>
+                  <ScrollPane fx:id="DrinksScrollPane" hbarPolicy="NEVER" prefHeight="520.0" prefWidth="843.0" vbarPolicy="ALWAYS">
+                     <content>
+                        <GridPane fx:id="drinksGrid" hgap="10" prefHeight="4.0" prefWidth="5.0" vgap="10" />
+                     </content>
+                  </ScrollPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <VBox alignment="CENTER" layoutX="996.0" layoutY="66.0" prefHeight="767.0" prefWidth="259.0" spacing="25.0" style="-fx-padding: 20px;" stylesheets="@Inventory.css" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="996.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="66.0">
+         <children>
+            <TextField fx:id="productField" prefHeight="41.0" prefWidth="142.0" promptText="Enter Product Name" stylesheets="@editproduct.css" />
+            <Button fx:id="addButton" onAction="#handleAddProduct" styleClass="custom-button" text="Add" />
+            <Button fx:id="editButton" onAction="#handleEdit" styleClass="custom-button" text="Edit" />
+            <Button fx:id="deleteButton" onAction="#handleDelete" styleClass="custom-button" text="Delete" />
+            <Button fx:id="stockButton" layoutX="47.0" layoutY="144.0" onAction="#handleStockUpdate" styleClass="custom-button" text="Stock" />
+         </children>
+      </VBox>
+      <Button fx:id="exitButton" layoutX="1156.0" layoutY="14.0" onAction="#handleExit" prefHeight="30.0" prefWidth="119.0" style="-fx-background-color: #FF5733;" text="Exit" />
+   </children>
+</AnchorPane>

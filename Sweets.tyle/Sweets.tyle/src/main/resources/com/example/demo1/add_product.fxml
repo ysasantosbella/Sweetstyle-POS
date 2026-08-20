@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="551.0" prefWidth="500" stylesheets="@addproduct.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AddProductController">
+    <children>
+        <Label layoutX="196.0" layoutY="21.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" stylesheets="@editproduct.css" text="Add Product" />
+        <TextField fx:id="nameField" layoutX="50" layoutY="60" prefWidth="400" promptText="Enter Product Name" />
+        <TextField fx:id="descField" layoutX="50.0" layoutY="107.0" prefWidth="400" promptText="Enter Description" />
+        <TextField fx:id="priceField" layoutX="50.0" layoutY="152.0" prefWidth="400" promptText="Enter Price" />
+        <TextField fx:id="stockField" layoutX="50.0" layoutY="196.0" prefWidth="400" promptText="Enter Stock Quantity" />
+
+        <ImageView fx:id="productImage" fitHeight="132.0" fitWidth="142.0" layoutX="179.0" layoutY="308.0" preserveRatio="true" />
+        <Label fx:id="imagePathLabel" alignment="CENTER" layoutX="50.0" layoutY="453.0" prefWidth="400" text="Select an image" />
+
+        <HBox alignment="CENTER" layoutX="50.0" layoutY="480.0" prefHeight="27.0" prefWidth="400.0" spacing="20.0">
+            <children>
+                <Button fx:id="saveButton1" onAction="#handleSelectImage" text="Select" />
+                <Button fx:id="saveButton" onAction="#handleSave" style="-fx-text-fill: white; -fx-background-color: #4CAF50;" text="Save" />
+                <Button fx:id="cancelButton" onAction="#handleCancel" style="-fx-text-fill: white; -fx-background-color: #FF5733;" text="Cancel" />
+            </children>
+        </HBox>
+      <ComboBox fx:id="categoryComboBox" layoutX="50.0" layoutY="241.0" prefWidth="150.0" promptText="Category" stylesheets="@addproduct.css" />
+    </children>
+</AnchorPane>

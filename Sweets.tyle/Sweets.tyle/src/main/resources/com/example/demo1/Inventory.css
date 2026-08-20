@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@700&display=swap');
+
+.root{
+    -fx-font-family: "Gothic A1";
+}
+
+.button {
+    -fx-background-color: #ffff;
+    -fx-background-radius: 100px;
+    -fx-text-fill: black;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-padding: 7px 20px;
+    -fx-font-size: 16px;
+    -fx-border-width: 0;
+    -fx-transition: all 250ms;
+}
+
+/* Simulating box-shadow effect */
+.button {
+    -fx-effect: dropshadow(gaussian, rgba(44, 187, 99, 0.2), 10, 0.5, 0, 4);
+}
+
+/* Add hover effect */
+.button:hover {
+    -fx-background-color: #f2d9e6;
+}
+
+#logoutButton {
+    -fx-background-color: #eec5de;
+    -fx-background-radius: 100px;
+    -fx-text-fill: black;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-padding: 7px 20px;
+    -fx-font-size: 16px;
+    -fx-border-width: 0;
+    -fx-transition: all 250ms;
+}
+
+#exitButton {
+    -fx-background-color: #eec5de;
+    -fx-background-radius: 100px;
+    -fx-text-fill: black;
+    -fx-font-family: "Roboto", sans-serif;
+    -fx-padding: 7px 20px;
+    -fx-font-size: 16px;
+    -fx-border-width: 0;
+    -fx-transition: all 250ms;
+}
+
+#logoutButton {
+    -fx-effect: dropshadow(gaussian, rgba(44, 187, 99, 0.2), 10, 0.5, 0, 4);
+}
+
+/* Add hover effect */
+#exitButton:hover {
+    -fx-background-color: #f2d9e6;
+}
+
+/* TAB WRAPPER STYLING */
+.tab-wrap {
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0.3, 0, 1);
+    -fx-padding: 0;
+}
+
+/* HEADER AREA STYLING */
+.tab-pane .tab-header-area {
+    -fx-background-color: #f2f2f2;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab {
+    -fx-padding: 12px;
+    -fx-background-color: #f2f2f2;
+    -fx-text-fill: #333;
+    -fx-background-radius: 6px 6px 0 0;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 3px 0;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: white;
+    -fx-border-color: #fff;
+    -fx-border-width: 0 0 3px 0;
+    -fx-text-fill: #000;
+}
+
+.tab-pane .tab:hover {
+    -fx-background-color: #f9f9f9;
+}
+
+/* TAB CONTENT */
+.tab__content {
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 0 0 6px 6px;
+}
+
+/* SCROLLPANE */
+.scroll-pane {
+    -fx-background-color: white;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: white;
+}
+
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: pink;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #d9edf4;
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+}
+
+/* GENERAL TYPOGRAPHY */
+.label {
+    -fx-font-family: "Helvetica";
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+}
